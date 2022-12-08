@@ -3,19 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>rabbitmq-demo</artifactId>
         <groupId>com.daipengcheng</groupId>
-        <artifactId>RabbitMQ-Demo</artifactId>
-        <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.daipengcheng</groupId>
     <artifactId>rabbitmq-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rabbitmq-common</name>
     <description>rabbitmq-common</description>
-    <properties>
-        <java.version>8</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>com.rabbitmq</groupId>
@@ -40,6 +36,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.4</version>
             </plugin>
         </plugins>
     </build>

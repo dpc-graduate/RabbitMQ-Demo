@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.daipengcheng</groupId>
-    <artifactId>rabbitmq-helloworld</artifactId>
+    <artifactId>rabbitmq-defaultconsumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rabbitmq-helloworld</name>
-    <description>rabbitmq-helloworld</description>
+    <name>rabbitmq-defaultconsumer</name>
+    <description>rabbitmq-defaultconsumer</description>
     <dependencies>
         <dependency>
             <groupId>com.daipengcheng</groupId>
