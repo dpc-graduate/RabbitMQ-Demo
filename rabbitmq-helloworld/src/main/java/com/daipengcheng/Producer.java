@@ -23,6 +23,7 @@ public class Producer {
         Connection connection = RabbitMQConnectUtil.newConnection();
         try {
             Channel channel = connection.createChannel();
+            channel.confirmSelect();
             /**
              * 创建队列
              * args1 队列名称
@@ -40,10 +41,14 @@ public class Producer {
              * args4 消息
              */
             channel.basicPublish("", queue, null, message.getBytes(StandardCharsets.UTF_8));
-            log.info("消息成功发送到队列,队列:{},消息:{}", queue, message);
-            RabbitMQConnectUtil.closeSource(channel, connection);
+            if(channel.waitForConfirms()){
+                log.info("消息成功发送到队列,队列:{},消息:{}", queue, message);
+                RabbitMQConnectUtil.closeSource(channel, connection);
+            }
         } catch (IOException e) {
             log.error("exception happen", e.getMessage());
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 public class RabbitMQConnectUtil {
+    private RabbitMQConnectUtil(){}
     public static Connection newConnection() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setHost("localhost");

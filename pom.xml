@@ -24,6 +24,7 @@
     <modules>
         <module>rabbitmq-helloworld</module>
         <module>rabbitmq-common</module>
+        <module>rabbitmq-publishandsubscribe</module>
     </modules>
     <dependencyManagement>
         <dependencies>
