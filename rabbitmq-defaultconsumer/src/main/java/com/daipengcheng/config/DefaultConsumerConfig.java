@@ -27,10 +27,10 @@ public class DefaultConsumerConfig extends DefaultConsumer {
     @Override
     public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
         log.info("消费者对消息进行消费!");
-        log.info("消费者接收到的consumerTag为:{}" + consumerTag);
-        log.info("消费者接收到的envelope为:{}" + envelope);
-        log.info("消费者接收到的信息配置为:{}" + properties);
-        log.info("消费者接收到的信息为:{}" + new String(body));
+        log.info("消费者接收到的consumerTag为:{}", consumerTag);
+        log.info("消费者接收到的envelope为:{}", envelope);
+        log.info("消费者接收到的信息配置为:{}", properties);
+        log.info("消费者接收到的信息为:{}", new String(body));
         this.getChannel().basicAck(envelope.getDeliveryTag(), false);
     }
 }

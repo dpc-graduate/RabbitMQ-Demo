@@ -16,6 +16,7 @@
         <module>rabbitmq-common</module>
         <module>rabbitmq-helloworld</module>
         <module>rabbitmq-publishandsubscribe</module>
+        <module>rabbitmq-defaultconsumer</module>
     </modules>
     <packaging>pom</packaging>
     <description>rabbitmq</description>
