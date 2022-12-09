@@ -7,4 +7,6 @@ public class RoutingKeyConstants {
     public static final String VIP_KEY = "vip";
     public static final String NORMAL_KEY = "normal";
     public static final String SUPER_VIP_KEY = "superVip";
+    public static final String DEAD_KEY = "deadKey";
+
 }

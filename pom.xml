@@ -18,6 +18,7 @@
         <module>rabbitmq-publishandsubscribe</module>
         <module>rabbitmq-defaultconsumer</module>
         <module>rabbitmq-qpslimiting</module>
+        <module>rabbitmq-deadqueue</module>
     </modules>
     <packaging>pom</packaging>
     <description>rabbitmq</description>
