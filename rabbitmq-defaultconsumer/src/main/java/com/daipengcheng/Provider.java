@@ -30,7 +30,7 @@ public class Provider {
                         .contentType("application/text")
                         .build();
                 channel.basicPublish(ExchangeConstants.DIRECT_EXCHANGE, "hello", properties, message.getBytes(StandardCharsets.UTF_8));      //发送消息并将消息持久化到磁盘
-                log.error("消息发送完成:{}", message);
+                log.info("消息发送完成:{}", message);
             }
         } catch (IOException e) {
             log.error("error happens:{}", e.getMessage());

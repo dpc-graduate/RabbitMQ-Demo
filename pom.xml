@@ -17,6 +17,7 @@
         <module>rabbitmq-helloworld</module>
         <module>rabbitmq-publishandsubscribe</module>
         <module>rabbitmq-defaultconsumer</module>
+        <module>rabbitmq-qpslimiting</module>
     </modules>
     <packaging>pom</packaging>
     <description>rabbitmq</description>
