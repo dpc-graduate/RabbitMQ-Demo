@@ -19,6 +19,7 @@
         <module>rabbitmq-defaultconsumer</module>
         <module>rabbitmq-qpslimiting</module>
         <module>rabbitmq-deadqueue</module>
+        <module>rabbitmq-priority</module>
     </modules>
     <packaging>pom</packaging>
     <description>rabbitmq</description>
