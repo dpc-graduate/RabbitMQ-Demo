@@ -10,9 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Consumer {
-
-    //队列名称
-
     public static void main(String[] args) throws Exception {
         Connection connection = RabbitMQConnectUtil.newConnection();
         Channel channel = connection.createChannel();
