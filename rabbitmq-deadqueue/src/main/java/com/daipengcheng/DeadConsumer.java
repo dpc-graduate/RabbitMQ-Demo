@@ -1,4 +1,4 @@
-package com.daipengcheng.maxlengthttl;
+package com.daipengcheng;
 
 import com.daipengcheng.constants.QueueConstants;
 import com.daipengcheng.util.RabbitMQConnectUtil;
