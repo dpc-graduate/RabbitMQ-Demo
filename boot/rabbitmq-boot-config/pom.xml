@@ -7,10 +7,10 @@
         <artifactId>rabbitmq-boot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>rabbitmq-boot-common</artifactId>
+    <artifactId>rabbitmq-boot-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rabbitmq-boot-common</name>
-    <description>rabbitmq-boot-common</description>
+    <name>rabbitmq-boot-config</name>
+    <description>rabbitmq-boot-config</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -26,8 +26,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.daipengcheng</groupId>
+            <artifactId>rabbitmq-boot-common</artifactId>
         </dependency>
     </dependencies>
 

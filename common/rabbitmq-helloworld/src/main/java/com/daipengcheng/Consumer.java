@@ -1,6 +1,5 @@
 package com.daipengcheng;
 
-import com.daipengcheng.constants.QueueConstants;
 import com.daipengcheng.util.RabbitMQConnectUtil;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
@@ -13,7 +12,8 @@ public class Consumer {
     public static final Logger log = LoggerFactory.getLogger(Consumer.class);
 
     public static void main(String[] args) {
-        useMessage(QueueConstants.QUEUE_HELLO_WORLD);
+        useMessage("liu");
+//        useMessage("zhu");
     }
 
     static void useMessage(String queue) {
@@ -21,7 +21,7 @@ public class Consumer {
         try {
             Channel channel = connection.createChannel();
             DeliverCallback deliverCallback = (consumerTag, message) -> {
-                log.info("消费者消费消息:{}", new String(message.getBody()));
+                log.info("消费者:{}消费消息:{}", queue,new String(message.getBody()));
             };
             CancelCallback cancelCallback = consumerTag -> {
                 log.info("消费者取消消费消息回调:{}", consumerTag);
@@ -35,7 +35,6 @@ public class Consumer {
              */
             channel.basicConsume(queue, true, deliverCallback, cancelCallback);
             log.info("消费者消费完毕");
-            RabbitMQConnectUtil.closeSource(channel, connection);
         } catch (Exception e) {
             log.error("error happens:{}", e.getMessage());
         }
